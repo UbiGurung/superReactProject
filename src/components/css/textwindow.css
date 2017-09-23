@@ -1,0 +1,7 @@
+#textWindow {
+    position: fixed;
+    width: 75%;
+    height: 75vh;
+    margin-top: 27vh;
+    background-color: red;
+}

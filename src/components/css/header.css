@@ -1,0 +1,11 @@
+#wrapper{
+    position: fixed;
+    width: 100%;
+    background-color: grey;
+    z-index: 3;
+}
+
+#logo{
+    width: 450px;
+    margin: auto;
+}

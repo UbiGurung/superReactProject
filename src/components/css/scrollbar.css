@@ -1,0 +1,17 @@
+#scrollBar{
+    height: 9001;
+    width: 25%;
+    position: absolute;
+    margin-top: 27vh;
+    margin-left: 75%;
+}
+
+#scrollBar  img{
+    width: 250px;
+    height: 250px;
+}
+
+#imagewrapper{
+    width: 250px;
+    margin: auto;
+}
