@@ -1,0 +1,16 @@
+#scrollBar{
+    height: 75vh;
+    width: 100%;
+    background-color: blue;
+    overflow: scroll;
+}
+
+#scrollBar  img{
+    width: 250px;
+    height: 250px;
+}
+
+#imagewrapper{
+    width: 250px;
+    margin: auto;
+}
