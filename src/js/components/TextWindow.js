@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Animate from 'grommet/components/Animate';
+import Box from 'grommet/components/Box';
+import Card from 'grommet/components/Card';
 
 export class TextWindow extends Component {
     render () { 
@@ -38,20 +40,27 @@ export class TextWindow extends Component {
 
     let renderPerson = (personName) => {
         let person = this.props.people.find(x => x.name === this.props.selectedPerson);
-        return <div className = "people">
+        return <Box className="people" style={{backgroundColor:'blue'}}>
+                <div style={{width:'40%', margin:'auto'}}>
                     <h1>{person.name}</h1>
                     <h2>{person.team}</h2>  
                     <h3>{person.desc}</h3>
                     <h3>{person.hobby}</h3> 
-                </div>;
+                </div>
+                </Box>
+
+            // return <Card colorIndex='light-2' contentPad='large' thumbnail={person.portrait} label={person.team} heading={person.name} description={person.desc} />
     }
         return(
-            <div id='textWindow'>
+            <Box id='textWindow' >
                 <Animate enter={{animation: 'slide-left', duration: '1000', delay: '2s'}}>
-                    <h1>Welcome to the Gradbook</h1>
+                    <h1>{this.props.welcome}</h1>
                 </Animate>
-                {this.props.selectedPerson && renderPerson(this.props.selectedPerson)}
-            </div>
+
+                <Animate enter={{animation:'fade', duration: '1000', delay:'2s'}}>
+                    {this.props.selectedPerson && renderPerson(this.props.selectedPerson)}
+                </Animate>
+            </Box>
         );
     }
 } 

@@ -1,1 +1,21 @@
 @import '~grommet/scss/vanilla/index';
+
+.people{
+    text-align: center;
+}
+
+.gradPics{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#scrollGrads{
+    background-image: url('https://preview.ibb.co/cpb2ok/scrollbarbackground.png');
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+
+#gradBox{
+    width: 75%;
+    position: fixed;
+    text-align: center;
+}

@@ -24,8 +24,6 @@ import NotFound from '../screens/NotFound';
 
 
 
-
-
 class Grads{
   constructor(name, desc, team, hobby, portrait){
       this.name = name;
@@ -39,7 +37,7 @@ class Grads{
 var people = [
   new Grads('Amrit', 'Five words to describe me', 'Investment Consultant', 'hobby', 'http://www.petmd.com/sites/default/files/scared-kitten-shutterstock_191443322.jpg'),
   new Grads('Holly', 'Five words to describe me', 'Investment Consultant', 'book', 'https://www.bluecross.org.uk/sites/default/files/assets/images/cat%20tick.jpg'),
-  new Grads('Ben Tattersal', 'Hiked up Mt Kinablu in Borneo. Lived in America for a year when I was six years old. In the summer I travelled to Asia and Canada', 'Investment Consultant', 'dancing', 'cat1.jpg'),
+  new Grads('Ben T.', 'Five words to describe me', 'Investment Consultant', 'dancing', 'http://www.catster.com/wp-content/uploads/2016/05/cats-politics-TN.jpg'),
   new Grads('Ben D.', 'Five words to describe me', 'Investment Consultant', 'dancing', 'http://www.catster.com/wp-content/uploads/2016/05/cats-politics-TN.jpg'),
   new Grads('Piravin', 'Five words to describe me', 'Investment Consultant', 'dancing', 'http://www.catster.com/wp-content/uploads/2016/05/cats-politics-TN.jpg'),
   new Grads('David', 'Five words to describe me', 'ALM', 'dancing', 'http://www.catster.com/wp-content/uploads/2016/05/cats-politics-TN.jpg'),
@@ -101,20 +99,14 @@ class Main extends Component {
           <div style={{position: 'fixed', zIndex: '3'}}>
               <RedTitle />
           </div>
-          {/*<Split separator={false} flex='right' fixed='true' id='split' id='scrollGrads' colorIndex='light-2' priority='left'>*/}
-            <Box direction='row'>
-                <div id='scrollbar'>
-                  <Box id="scrollGrads" colorIndex='light-1' pad='medium' direction='row' basis='small' size='medium'>
-                    <ScrollBar onChange={this.changeName} people={people}/>
-                  </Box>
-                </div>
-                <div>
-                  <Box id='gradBox' colorIndex='light-1' pad='small' full='vertical' justify='center' align='center' alignSelf='center' >
-                    <TextWindow selectedPerson={this.state.name} people={people} welcome={welcomeMsg}/>
-                  </Box>
-                </div>
-            </Box>
-          {/*</Split>*/}
+          <Split separator={false} flex='right' fixed='true' id='split' id='scrollGrads' colorIndex='light-2' priority='left'>
+              <Box id="scrollGrads" colorIndex='light-1' pad='medium' direction='row' basis='small' style={{paddingTop: '100px'}}>
+                <ScrollBar onChange={this.changeName} people={people}/>
+              </Box>
+              <Box id='gradBox' colorIndex='light-1' pad='small' justify='center' align='center' full='vertical'>
+                <TextWindow selectedPerson={this.state.name} people={people} welcome={welcomeMsg}/>
+              </Box>
+          </Split>
       </App>
     );
   }
